@@ -35,7 +35,7 @@ def shannon(labels):
         if label not in classes:
             classes[label] = 0
         classes[label] += 1
-    criteria = 1
+    criteria = 0
     for label in classes:
         p = classes[label] / len(labels)
         criteria = -(np.sum(p * np.log2(p)))
